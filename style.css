@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top left, #19002C, #37035A);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    /* Removed background-color, padding, border-radius, box-shadow */
+    max-width: 800px;
+    width: 90%;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px; /* Reduced margin below the header-logo container */
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-right: 5px; /* Reduced space between logo and title */
+    margin-bottom: 0; /* Reset margin from general .logo rule */
+}
+
+.header-logo h1 {
+    font-size: 3em;
+    margin: 0; /* Ensure no default margins interfere with alignment */
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Space between cards */
+    margin-bottom: 20px;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly more opaque for definition */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for cards */
+    flex: 1 1 calc(50% - 30px); /* Two cards per row on larger screens */
+    min-width: 280px; /* Minimum width for cards */
+    text-align: left;
+}
+
+.feature-card p {
+    font-size: 1em;
+    margin: 0; /* Reset margin from general p rule */
+}
+
+.feature-card strong {
+    color: #FFD700; /* Highlight feature titles */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #37035A;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #eee;
+}
+
+.screenshots {
+    margin-top: 50px;
+    margin-bottom: 50px; /* Added margin-bottom */
+}
+
+.screenshots h2 {
+    /* Removed h2 styles as the title is removed */
+    display: none; /* Hide the h2 element */
+}
+
+.screenshot-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.screenshot-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Less intense shadow */
+    width: 300px; /* Adjust as needed */
+    text-align: center;
+}
+
+.screenshot-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.screenshot-item p {
+    font-size: 0.9em;
+    color: #ccc;
+    margin: 0;
+}
