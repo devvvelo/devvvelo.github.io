@@ -1,20 +1,27 @@
-body {
-    font-family: Arial, sans-serif;
+html {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background: radial-gradient(circle at top left, #19002C, #37035A);
+    background-attachment: fixed;
     color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
+    height: 100%;
     text-align: center;
 }
 
 .container {
+    flex-grow: 1;
     /* Removed background-color, padding, border-radius, box-shadow */
     max-width: 800px;
     width: 90%;
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .header-logo {
@@ -239,4 +246,20 @@ p {
         width: 100px;
         height: 100px;
     }
+}
+
+.footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+.footer a:hover {
+    border-bottom: 2px solid #fff;
 }
