@@ -49,6 +49,13 @@ p {
     margin-bottom: 20px;
 }
 
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%; /* Ensure the h2 takes full width to center properly */
+}
+
 .feature-card {
     background-color: rgba(255, 255, 255, 0.1); /* Slightly more opaque for definition */
     padding: 20px;
@@ -105,8 +112,8 @@ p {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Less intense shadow */
-    width: 300px; /* Adjust as needed */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
     text-align: center;
 }
 
@@ -115,10 +122,121 @@ p {
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
+    cursor: pointer; /* Add cursor pointer to indicate clickability */
 }
 
 .screenshot-item p {
     font-size: 0.9em;
     color: #ccc;
     margin: 0;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 1000px; /* Increased max-width */
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* Tips Section */
+.tips-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center; /* Center the heading */
+}
+
+.tips-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tips-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Space between cards */
+    margin-bottom: 20px;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .header-logo h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .feature-card {
+        flex: 1 1 100%; /* One card per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo h1 {
+        font-size: 2em;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
 }

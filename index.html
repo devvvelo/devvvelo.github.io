@@ -12,30 +12,31 @@
             <img src="veloicon.png" alt="Velo Logo" class="logo">
             <h1>Velo</h1>
         </div>
-        <p>Your Media Hub for tvOS. Discover, track, and enjoy movies and TV shows seamlessly.</p>
+        <p class="fade-in">Your Media Hub for tvOS. Discover, track, and enjoy movies and TV shows seamlessly.</p>
 
-        <div class="screenshots">
+        <div class="screenshots fade-in">
             <div class="screenshot-gallery">
                 <div class="screenshot-item">
-                    <img src="home_main.png" alt="Velo Home Screen" class="screenshot-img">
-                    <p>Main Home Screen</p>
+                    <img src="home_main.png" alt="Velo Home Screen" class="screenshot-img" data-fullsrc="home_main.png">
+                    <p>Home Screen</p>
                 </div>
                 <div class="screenshot-item">
-                    <img src="home_mid.png" alt="Velo Mid Home Screen" class="screenshot-img">
-                    <p>Mid Home Screen</p>
+                    <img src="home_mid.png" alt="Velo Mid Home Screen" class="screenshot-img" data-fullsrc="home_mid.png">
+                    <p>Media Shelves</p>
                 </div>
                 <div class="screenshot-item">
-                    <img src="movie_detail_view.png" alt="Velo Movie Detail View" class="screenshot-img">
-                    <p>Movie Detail View</p>
+                    <img src="movie_detail_view.png" alt="Velo Movie Detail View" class="screenshot-img" data-fullsrc="movie_detail_view.png">
+                    <p>Movie Detail</p>
                 </div>
                 <div class="screenshot-item">
-                    <img src="series_detail.png" alt="Velo Series Detail" class="screenshot-img">
+                    <img src="series_detail.png" alt="Velo Series Detail" class="screenshot-img" data-fullsrc="series_detail.png">
                     <p>Series Detail</p>
                 </div>
             </div>
         </div>
 
-        <div class="features">
+        <div class="features fade-in">
+            <h2>Features</h2>
             <div class="feature-card">
                 <p><strong>tvOS First:</strong> Native tvOS experience.</p>
             </div>
@@ -55,6 +56,85 @@
                 <p><strong>Personal Library:</strong> Manage your watch list.</p>
             </div>
         </div>
+
+        <div class="tips-section fade-in">
+            <h2>Tips</h2>
+            <div class="tips-cards-container">
+                <div class="feature-card">
+                    <p><strong>Context Menu:</strong> Long press on cards to reveal alternative options. For example, recently watched items can be deleted, and the play button can show alternative streams if more than one is available.</p>
+                </div>
+                <div class="feature-card">
+                    <p><strong>Remote App for URLs:</strong> Use your iPhone's Remote app to easily copy/paste long add-on URLs into Velo.</p>
+                </div>
+                <div class="feature-card">
+                    <p><strong>Customizable Home Screen:</strong> Home screen media shelves can be enabled or disabled in the app's settings.</p>
+                </div>
+                <div class="feature-card">
+                    <p><strong>Personal TMDB API Key:</strong> For full functionality, get a free personal TMDB API key and add it in the app's settings.</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var imgs = document.querySelectorAll(".screenshot-img");
+        var modalImg = document.getElementById("img01");
+
+        imgs.forEach(function(img) {
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.dataset.fullsrc;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal-content, close it
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Intersection Observer for fade-in animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeInElements = document.querySelectorAll(".fade-in");
+
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: "0px",
+                threshold: 0.1 // 10% of the element must be visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
