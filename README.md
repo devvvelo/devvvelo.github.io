@@ -23,7 +23,3 @@ Velo is a native tvOS application designed to be your ultimate media hub. Discov
 *   **Remote App for URLs:** For easy input of long add-on URLs, use your iPhone's Remote app to copy and paste directly into Velo.
 *   **Customizable Home Screen:** Tailor your home screen by enabling or disabling media shelves directly from the app's settings.
 *   **Personal TMDB API Key:** To unlock full functionality and content, obtain a free personal TMDB API key and add it within Velo's settings.
-
-## Getting Started
-
-(Further instructions on how to build, install, or acquire Velo would go here if available.)
