@@ -1,0 +1,22 @@
+{
+    "metas": [
+        {
+            "id": "tt1254207",
+            "type": "movie",
+            "name": "Big Buck Bunny",
+            "poster": "https://image.tmdb.org/t/p/w500/i9jJzvoXET4D9pOkoEwncSdNNER.jpg"
+        },
+        {
+            "id": "tt0063350",
+            "type": "movie",
+            "name": "Night of the Living Dead",
+            "poster": "https://image.tmdb.org/t/p/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg"
+        },
+        {
+            "id": "tt0056923",
+            "type": "movie",
+            "name": "Charade",
+            "poster": "https://image.tmdb.org/t/p/w500/qqaPjC5FQidtKY65jbAKZPiOTaS.jpg" 
+        }
+    ]
+}

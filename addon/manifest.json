@@ -1,0 +1,25 @@
+{
+    "id": "org.gemini.test-addon",
+    "version": "1.0.0",
+    "name": "Gemini Test Addon",
+    "description": "An addon for testing purposes.",
+    "resources": [
+        "catalog",
+        {
+            "name": "stream",
+            "types": [
+                "movie"
+            ]
+        }
+    ],
+    "types": [
+        "movie"
+    ],
+    "catalogs": [
+        {
+            "type": "movie",
+            "id": "test_movies",
+            "name": "Test Movies"
+        }
+    ]
+}
