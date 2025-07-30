@@ -1,7 +1,7 @@
 {
-    "id": "org.gemini.test-addon",
+    "id": "org.velo.test-addon",
     "version": "1.0.0",
-    "name": "Gemini Test Addon",
+    "name": "Velo Test Addon",
     "description": "An addon for testing purposes.",
     "resources": [
         "catalog",
